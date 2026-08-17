@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "location": "Variety Square, Sitabuldi",
+    "latitude": 21.1458,
+    "longitude": 79.0821,
+    "risk_score": 0.95,
+    "status": "unmanned",
+    "reason": "High traffic volume + past accident cluster during evening rush.",
+    "recommendation": "Deploy 2 units immediately."
+  },
+  {
+    "id": "2",
+    "location": "Sadar Bazaar Junction",
+    "latitude": 21.1575,
+    "longitude": 79.0833,
+    "risk_score": 0.75,
+    "status": "manned",
+    "reason": "Moderate congestion due to weekend market.",
+    "recommendation": "Maintain current 1 unit."
+  }
+]
