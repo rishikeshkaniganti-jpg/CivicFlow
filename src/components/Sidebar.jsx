@@ -1,6 +1,5 @@
-import { motion } from "motion/react";
 import { AlertTriangle, ShieldCheck, Settings2 } from "lucide-react";
-import riskData from '../data/mockData.json';
+import riskData from '../mockdata.json';
 
 export default function Sidebar() {
   const rankedAlerts = [...riskData].sort((a, b) => b.risk_score - a.risk_score);
@@ -16,12 +15,9 @@ export default function Sidebar() {
       <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">Ranked Deployments</h2>
 
       <div className="flex flex-col gap-4">
-        {rankedAlerts.map((alert, index) => (
-          <motion.div
+        {rankedAlerts.map((alert) => (
+          <div
             key={alert.id}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.15, type: 'spring' }}
             className={`p-4 rounded-xl border ${alert.status === 'unmanned' ? 'bg-red-950/20 border-red-900/50' : 'bg-gray-900 border-gray-800'}`}
           >
             <div className="flex justify-between items-start mb-2">
@@ -42,7 +38,7 @@ export default function Sidebar() {
                 Manual Override
               </button>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
